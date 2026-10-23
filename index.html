@@ -1,0 +1,129 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+  <head> 
+ <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="Explore motorcycle racing events and select your preferred race tickets.">
+ <title>APEX GRID | Race Tickets</title>
+ <link rel="stylesheet" href="style.css"> 
+<script src="script.js" defer>
+   </script>
+ </head> 
+ <body> 
+     
+   <!-- Navigation --> <header>
+   <nav class="navbar">
+ <a href="#" class="logo">APEX
+ <span>GRID</span>
+ </a>
+ <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false"> ☰ </button> 
+<div class="nav-links" id="navLinks">
+  <a href="#home">Home</a>
+ <a href="#races">Race Calendar</a> 
+ <a href="#about">About</a> 
+ </div> 
+ <a href="#races" class="nav-button">Get Tickets</a>
+  </nav>
+ </header> 
+<main> 
+    <!-- Hero Section --> 
+    <section class="hero" id="home"> 
+ <div class="hero-content"> 
+  <p class="eyebrow">EXPERIENCE THE SPEED</p> 
+  <h1> FEEL THE<br>
+   <span>THUNDER.</span> 
+  </h1> 
+  <p class="hero-description"> Experience the excitement of motorcycle racing. Explore race events and choose your preferred tickets. </p>
+   <a href="#races" class="button"> Explore Tickets → </a>
+       </div>
+     <div class="hero-visual" aria-hidden="true"> 
+      <div class="speed-circle">🏍️
+      </div> 
+     <p>FULL THROTTLE</p> 
+     </div> 
+     </section>
+              <!-- Race Calendar --> 
+        <section class="races section" id="races">
+             <div class="section-heading">
+      <p class="eyebrow">CHOOSE YOUR EVENT</p> 
+      <h2>Find Your Race</h2> 
+<p> Browse sample racing events and select a ticket category. </p> 
+  </div> 
+  <div class="race-grid" id="raceGrid">
+       <!-- JavaScript inserts race cards here --> 
+  </div> 
+  </section> 
+  <!-- Benefits --> 
+  <section class="about section" id="about">
+       <div class="section-heading"> 
+    <p class="eyebrow">THE RACE EXPERIENCE</p> 
+     <h2>More Than A Race</h2>
+      </div> 
+   <div class="benefit-grid"> 
+  <article class="benefit-card"> 
+   <h3>🏁 Choose Your View</h3>
+  <p> Compare ticket categories and select the experience that suits you. </p> 
+  </article> 
+  <article class="benefit-card"> 
+      <h3>🎟️ Simple Booking</h3> 
+      <p> Choose an event, select your ticket quantity, and review your booking details. </p> 
+      </article>
+       <article class="benefit-card"> 
+    <h3>📱 Responsive Website</h3> 
+   <p> Browse the website on your phone, tablet, or computer. </p> </article> 
+   </div> 
+   </section> 
+   </main>
+    <!-- Booking Modal --> 
+    <dialog id="bookingModal" aria-labelledby="bookingTitle"> <div class="modal-header">
+  <h2 id="bookingTitle">Book Your Tickets</h2>
+   <button type="button" id="closeModal" class="close-button" aria-label="Close booking form"> × 
+   </button> 
+   </div> 
+   <form id="bookingForm"> 
+       <p id="selectedRace" class="selected-race">  </p> 
+       <label for="ticketType">Ticket Category</label> 
+       <select id="ticketType" required> 
+           <option value="general">General Admission</option> <option value="grandstand">Grandstand</option> 
+           <option value="vip">VIP Experience</option> 
+           </select>
+            <label for="quantity">Number of Tickets</label>
+             <input type="number" id="quantity" min="1" max="10" value="1" required > 
+  <label for="customerName">Full Name</label>
+  <input type="text" id="customerName" maxlength="100" autocomplete="name" placeholder="Enter your full name" required > <label for="customerEmail">Email Address</label>
+ <input type="email" id="customerEmail" maxlength="254" autocomplete="email" placeholder="Enter your email" required >
+  <div class="total-row"> 
+      <span>Estimated Total</span> 
+      <strong id="totalPrice">€85</strong>
+       </div> 
+ <button type="submit" class="button submit-button"> Review Booking </button> 
+  <p class="form-note"> Demonstration only. No payment will be taken and no valid ticket will be issued. </p> 
+  </form> 
+  </dialog> 
+  <!-- Booking Confirmation --> 
+  <dialog id="confirmationModal" aria-labelledby="confirmationTitle">
+       <div class="confirmation-content"> 
+  <div class="success-icon" aria-hidden="true">✓</div> 
+  <h2 id="confirmationTitle">Booking Preview</h2> 
+  <p id="confirmationMessage"></p> 
+  <p class="form-note"> This is not a confirmed purchase. Your information has not been sent to a server or saved to a database. </p> 
+  <button id="finishBooking" class="button"> Close </button> 
+  </div>
+   </dialog>
+    <!-- Footer --> 
+    <footer>
+         <div class="footer-content"> 
+  <a href="#" class="logo">APEX
+  <span>GRID</span>
+  </a> 
+  <p> An independent motorcycle racing ticket-store demonstration. </p> 
+  <p class="disclaimer"> Not affiliated with or endorsed by MotoGP. Sample events and prices are illustrative. No real tickets are sold through this demonstration. </p>
+   <p>© 
+   <span id="year">
+       
+   </span> APEX GRID</p> 
+   </div> 
+   </footer> 
+  
+    </body> 
+    </html> 
